@@ -1,7 +1,39 @@
-<button
-  class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-400"
->
-  Hello
-</button>
+<div class="m-5">
+  <h1>CalculateFree</h1>
 
-<h1>CalculateFree</h1>
+  <div class="flex-col p-5">
+    <div class="flex m-5">
+      <input
+        class="text-center"
+        type="number"
+        placeholder="años"
+        [(ngModel)]="yearsBase"
+        (change)="calculateTime()"
+      />
+      <input
+        class="text-center"
+        type="number"
+        placeholder="meses"
+        [(ngModel)]="monthBase == 0 ? 'meses' : monthBase"
+        (change)="calculateTime()"
+      />
+    </div>
+    <div class="m-5">
+      <input
+        class="text-center"
+        type="number"
+        placeholder="porcentaje"
+        value="60"
+        [(ngModel)]="percentTime"
+      />
+    </div>
+  </div>
+  <div>
+    <input [(ngModel)]="timeCalculated" />
+  </div>
+  <button
+    class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-400"
+  >
+    Hello
+  </button>
+</div>
