@@ -14,7 +14,7 @@
         class="text-center"
         type="number"
         placeholder="meses"
-        [(ngModel)]="monthBase == 0 ? 'meses' : monthBase"
+        [(ngModel)]="monthBase"
         (change)="calculateTime()"
       />
     </div>
@@ -24,6 +24,7 @@
         type="number"
         placeholder="porcentaje"
         value="60"
+        (change)="calculateTime()"
         [(ngModel)]="percentTime"
       />
     </div>
@@ -32,8 +33,18 @@
     <input [(ngModel)]="timeCalculated" />
   </div>
   <button
-    class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-400"
+    class="
+      py-2
+      px-4
+      border border-transparent
+      shadow-sm
+      text-sm
+      font-medium
+      rounded-md
+      text-white
+      bg-red-400
+    "
   >
-    Hello
+    Calculate
   </button>
 </div>
